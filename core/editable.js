@@ -1004,14 +1004,14 @@
 				this.setCustomData( 'cke_includeReadonly', !editor.config.disableReadonlyStyling );
 
 				// Prevent the browser opening read-only links. (https://dev.ckeditor.com/ticket/6032 & https://dev.ckeditor.com/ticket/10912)
-				this.attachListener( this, 'click', function( evt ) {
-					evt = evt.data;
+				// this.attachListener( this, 'click', function( evt ) {
+				// 	evt = evt.data;
 
-					var link = new CKEDITOR.dom.elementPath( evt.getTarget(), this ).contains( 'a' );
+				// 	var link = new CKEDITOR.dom.elementPath( evt.getTarget(), this ).contains( 'a' );
 
-					if ( link && evt.$.button != 2 && link.isReadOnly() )
-						evt.preventDefault();
-				} );
+				// 	if ( link && evt.$.button != 2 && link.isReadOnly() )
+				// 		evt.preventDefault();
+				// } );
 
 				var backspaceOrDelete = { 8: 1, 46: 1 };
 
